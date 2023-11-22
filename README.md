@@ -3,6 +3,7 @@
 - helix
   - [helix install](https://docs.helix-editor.com/install.html)
 - tmux
+  - 'git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm'
   - `tmux`
   - `tmux source ~/.config/tmux/tmux.conf`
   - `ctrl` + `j`, `I`
