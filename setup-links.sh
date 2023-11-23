@@ -13,3 +13,6 @@ ln -s ~/.dotfiles/helix ~/.config/helix
 # zsh setup
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+
+# neofetch setup
+ln -s ~/.dotfiles/neofetch ~/.config/neofetch
