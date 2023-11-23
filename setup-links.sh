@@ -5,7 +5,7 @@ mkdir -p ~/.config
 # tmux setup
 ln -s ~/.dotfiles/tmux ~/.config/tmux
 mkdir -p ~/.tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # helix setup
 ln -s ~/.dotfiles/helix ~/.config/helix
