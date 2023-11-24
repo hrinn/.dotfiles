@@ -9,5 +9,6 @@
 - zsh
   - [oh my zsh install](https://ohmyz.sh/#install)
   - [powerlevel10k install](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
+  - [autojump](https://github.com/wting/autojump)
 - neofetch
   - [neofetch install](https://github.com/dylanaraps/neofetch/wiki/Installation)
