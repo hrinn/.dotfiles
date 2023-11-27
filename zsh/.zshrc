@@ -41,6 +41,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export EDITOR=hx
+export COLORTERM=truecolor
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -54,12 +57,20 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="$EDITOR ~/.zshrc"
+alias ..="cd .."
+alias ...="cd ../../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+alias reboot="sudo /sbin/reboot"
 
-export EDITOR=hx
-export COLORTERM=truecolor
+# git aliases
+alias gbl="git branch -l"
+alias ga="git add"
+alias gad="git add ."
+alias gct="git commit"
+alias gca="git commit --amend"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
