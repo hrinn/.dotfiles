@@ -1,5 +1,6 @@
 # Setup
-- `./setup-links.sh`
+- `./config_clean.sh`
+- `./config_setup.sh`
 - helix
   - [helix install](https://docs.helix-editor.com/install.html)
 - tmux
