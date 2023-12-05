@@ -59,7 +59,7 @@ export COLORTERM=truecolor
 #
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ..="cd .."
-alias ...="cd ../../.."
+alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
@@ -71,6 +71,7 @@ alias ga="git add"
 alias gad="git add ."
 alias gct="git commit"
 alias gca="git commit --amend"
+alias gst="git status"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
