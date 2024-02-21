@@ -73,9 +73,15 @@ alias gct="git commit"
 alias gca="git commit --amend"
 alias gst="git status"
 
+alias gpg-reload="echo RELOADAGENT | gpg-connect-agent"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Autojump
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
+
+# GPG TTY
+GPG_TTY=$(tty)
+export GPG_TTY

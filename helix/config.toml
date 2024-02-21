@@ -1,4 +1,12 @@
 theme = "catppuccin_mocha"
 
 [editor]
-rulers=[80]
+rulers=[100]
+line-number = "relative"
+bufferline = "multiple"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name", "file-modification-indicator"]
+
+[editor.file-picker]
+hidden = false
