@@ -72,8 +72,16 @@ alias gad="git add ."
 alias gct="git commit"
 alias gca="git commit --amend"
 alias gst="git status"
+alias gpf="git push -f"
+
+# alias br="echo $(git symbolic-ref --short HEAD)"
 
 alias gpg-reload="echo RELOADAGENT | gpg-connect-agent"
+
+# zellij aliases
+alias zj="zellij"
+alias zjan="zj action new-tab"
+alias zjans="zj action new-tab --layout strider"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -85,3 +93,7 @@ autoload -U compinit && compinit -u
 # GPG TTY
 GPG_TTY=$(tty)
 export GPG_TTY
+
+
+
+eval "$(atuin init zsh)"

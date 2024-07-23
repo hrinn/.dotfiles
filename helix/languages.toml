@@ -5,6 +5,7 @@ indent = { tab-width = 4, unit = "    " }
 [[language]]
 name = "python"
 language-servers = ["pylsp"]
+indent = { tab-width = 4, unit = "    " }
 
 [language-server.pylsp.config.pylsp.plugins]
 flake8 = {enabled = false}
