@@ -1,15 +1,17 @@
 # Makefile to setup configs via symbolic links
 # Installs software on system as well
 
+ROOT_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
+
 default:
 	echo "Please specify a target."
 
 setup:
 	mkdir -p ~/.config
-	[ ! -e ~/.config/helix ] && ln -s helix ~/.config/helix || true
-	[ ! -e ~/.config/neofetch ] && ln -s neofetch ~/.config/neofetch || true
-	[ ! -e ~/.config/atuin ] && ln -s atuin ~/.config/atuin || true
-	[ ! -e ~/.config/fish ] && ln -s fish ~/.config/fish || true
+	[ ! -e ~/.config/helix ] && ln -s $(ROOT_DIR)/helix ~/.config/helix || true
+	[ ! -e ~/.config/neofetch ] && ln -s $(ROOT_DIR)/neofetch ~/.config/neofetch || true
+	[ ! -e ~/.config/atuin ] && ln -s $(ROOT_DIR)/atuin ~/.config/atuin || true
+	[ ! -e ~/.config/fish ] && ln -s $(ROOT_DIR)/fish ~/.config/fish || true
 
 PACKAGES = helix neofetch zsh atuin autojump fish
 
