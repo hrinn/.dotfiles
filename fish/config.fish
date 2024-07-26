@@ -7,7 +7,7 @@ function fish_greeting
 end
 
 # Paths
-fish_add_path -g ~/bin ~/.local/bin ~/.cargo/env
+fish_add_path -g ~/bin ~/.local/bin ~/.cargo/env ~/.cargo/bin
 
 # Defaults
 set -gx EDITOR hx
@@ -17,12 +17,19 @@ set -gx COLORTERM truecolor
 alias editfish="$EDITOR $__fish_config_dir/config.fish"
 alias loadfish="source $__fish_config_dir/config.fish"
 
+# WSL configs
+if test -n "$WSL_DISTRO_NAME"
+    set -gx WINHOME /mnt/c/users/haydenrinn
+    fish_add_path -g /mnt/c/Windows
+end
+
 # Git aliases
 alias gbl="git branch -l"
 alias ga="git add"
 alias gad="git add ."
 alias gct="git commit"
 alias gca="git commit --amend"
+alias gcs="git commit -s"
 alias gst="git status"
 alias gpf="git push -f"
 alias gp="git push"
@@ -33,7 +40,7 @@ function gpsu
 end
 
 # Zellij aliases
-alias zj zellij
+alias zj="zellij"
 set -gx ATUIN_SESSION (atuin uuid)
 set --erase ATUIN_HISTORY_ID
 
