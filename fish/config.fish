@@ -6,6 +6,10 @@ function fish_greeting
     neofetch --ascii ~/.config/neofetch/paul.txt
 end
 
+if not ssh-add -l >/dev/null 2>&1
+    eval (keychain --eval --agents "ssh" id_rsa)
+end
+
 # Paths
 fish_add_path -g ~/bin ~/.local/bin ~/.cargo/env ~/.cargo/bin
 
@@ -37,6 +41,10 @@ alias gbs="git branch --show-current"
 
 function gpsu
     git push --set-upstream origin (gbs)
+end
+
+function grho
+    git reset --hard origin/(gbs)
 end
 
 # Zellij aliases
