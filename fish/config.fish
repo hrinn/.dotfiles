@@ -38,6 +38,7 @@ alias gst="git status"
 alias gpf="git push -f"
 alias gp="git push"
 alias gbs="git branch --show-current"
+alias gr="git rev-parse --show-toplevel"
 
 function gpsu
     git push --set-upstream origin (gbs)
@@ -45,6 +46,11 @@ end
 
 function grho
     git reset --hard origin/(gbs)
+end
+
+function gar
+    # git add repo root
+    git add (gr)
 end
 
 # Zellij aliases
