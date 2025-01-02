@@ -55,14 +55,28 @@ end
 
 # Zellij aliases
 alias zj="zellij"
+
+function jz
+    if test (count $argv) -ne 1
+        echo "Usage: jz <target>"
+        return 1
+    end
+
+    j "$argv[1]"
+    zellij action new-tab --cwd (pwd) -n "$argv[1]" --layout compact
+    cd -
+end
+
 set -gx ATUIN_SESSION (atuin uuid)
 set --erase ATUIN_HISTORY_ID
 
 # System aliases
-function cd
-    builtin cd $argv
-    ls
-end
+# function cd
+#     builtin cd $argv
+#     and ls
+# end
+
+alias rmzid="rm *Zone.Identifier"
 
 # Atuin init
 source $__fish_config_dir/atuin.fish
@@ -71,3 +85,10 @@ source $__fish_config_dir/atuin.fish
 if test -f /home/haydenrinn/.autojump/share/autojump/autojump.fish
     . /home/haydenrinn/.autojump/share/autojump/autojump.fish
 end
+
+# bootgen global vars
+set -gx BOOTGEN $HOME/overlakefw/CastlePeak/build/bootgen/bin/bootgen
+set -gx ECDSA_SIGN $HOME/bin/ecdsa-sign
+
+# Bindings
+# bind ctrl-o zellij
