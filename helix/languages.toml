@@ -1,6 +1,10 @@
 [[language]]
 name = "c"
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "python"

@@ -97,3 +97,5 @@ export GPG_TTY
 
 
 eval "$(atuin init zsh)"
+
+. "$HOME/.atuin/bin/env"

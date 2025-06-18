@@ -1,7 +1,7 @@
-theme = "catppuccin_mocha"
+theme = "monokai_pro_machine"
 
 [editor]
-rulers=[100]
+rulers=[80]
 line-number = "relative"
 bufferline = "multiple"
 
