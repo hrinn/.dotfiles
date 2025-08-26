@@ -1,0 +1,35 @@
+layout {
+	// Templates
+	default_tab_template {
+		children
+		pane size=1 borderless=true {
+			plugin location="zellij:compact-bar"
+		}
+	}
+	
+	// Tabs
+	tab name="~" cwd="~" focus=true {
+		pane
+	}
+	tab name="Castle" cwd="~/overlakefw/CastlePeak" {
+		pane
+	}
+	tab name="Validation" cwd="~/overlakefw/Validation" {
+		pane name="edit" edit="." focus=true
+		pane size="30%"
+	}
+	tab name="rpufw" split_direction="vertical" cwd="~/overlakefw/rpufw" {
+		pane split_direction="vertical" {
+			pane name="edit" edit="." focus=true
+			pane split_direction="horizontal" size="30%" {
+				pane
+				pane {
+					name "compile nmcfw"
+					command "bash"
+					args "-c" "source /tools/Xilinx/Vitis/2024.2/settings64.sh && source ./smartnic_msft_fw.sh && ./build.sh -p ksb_overlake_tahoe --debug -s EFTEST -r -- -- -j"
+					start_suspended true
+				}
+			}
+		}
+	}
+}
