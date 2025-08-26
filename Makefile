@@ -14,7 +14,7 @@ setup:
 	[ ! -e ~/.config/fish ] && ln -s $(ROOT_DIR)/fish ~/.config/fish || true
 	[ ! -e ~/.config/zellij ] && ln -s $(ROOT_DIR)/zellij ~/.config/zellij || true
 
-PACKAGES = helix neofetch zsh atuin autojump fish zellij
+PACKAGES = helix neofetch atuin autojump fish zellij
 
 install-ubuntu: $(foreach pkg,$(PACKAGES),install-$(pkg)-ubuntu)
 

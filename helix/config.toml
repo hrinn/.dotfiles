@@ -4,6 +4,7 @@ theme = "monokai_pro_machine"
 rulers=[80]
 line-number = "relative"
 bufferline = "multiple"
+continue-comments = false
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name", "file-modification-indicator"]

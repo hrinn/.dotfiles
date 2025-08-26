@@ -107,3 +107,8 @@ set -gx ECDSA_SIGN $HOME/bin/ecdsa-sign
 
 # Work Vars
 set -gx M05IP "10.209.161.21"
+set -gx C09UIP "10.177.224.13"
+set -gx C09LIP "10.177.224.14"
+
+# direnv hookin
+eval (direnv hook fish)
