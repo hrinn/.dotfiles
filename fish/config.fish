@@ -77,6 +77,16 @@ function jz
     cd -
 end
 
+function jzi
+    if test (count $argv) -ne 1
+        echo "Usage: jzi <target>"
+        return 1
+    end
+
+    j "$argv[1]"
+    zj action rename-tab "$argv[1]"
+end
+
 set -gx ATUIN_SESSION (atuin uuid)
 set --erase ATUIN_HISTORY_ID
 
